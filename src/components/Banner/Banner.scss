@@ -1,0 +1,138 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/global.scss" as *;
+.Banner {
+  &-section {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    &-image1,
+    &-image2,
+    &-image3,
+    &-image4 {
+      height: 30rem;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &-image1 {
+      background: url("../../assets/desktop/image-transform.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &-image2 {
+      background: url("../../assets/desktop/image-stand-out.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &-image3 {
+      background: url("../../assets/desktop/image-graphic-design.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+
+      &-statement {
+        width: 60%;
+        padding-bottom: 2rem;
+        text-align: center;
+        h2 {
+          font-family: Fraunces-Bold;
+          color: $dark-blue;
+          margin-bottom:1rem ;
+        }
+        p {
+          font-family: Barlow;
+          color: $dark-blue;
+        }
+      }
+    }
+    &-image4 {
+      background: url("../../assets/desktop/image-photography.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      &-statement {
+        width: 60%;
+        padding-bottom: 2rem;
+        text-align: center;
+        h2 {
+          font-family: Fraunces-Bold;
+          color: $dark-blue;
+          margin-bottom:1rem ;
+        }
+        p {
+          font-family: Barlow;
+          color: $dark-blue;
+        }
+      }
+    }
+    &-statement {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+      padding: 4rem 7rem;
+      h2 {
+        font-family: Fraunces-Bold;
+        font-size: 40px;
+      }
+      p {
+        font-family: Barlow;
+        color: $light-gray;
+      }
+      h3 {
+        font-family: Fraunces-Bold;
+      }
+      .statement1:hover {
+        text-decoration: underline 5px solid $yellow;
+      }
+      .statement2:hover {
+        text-decoration: underline 5px solid $soft-red;
+      }
+    }
+  }
+}
+@include mobile {
+  .Banner {
+    &-section {
+      display: flex;
+      flex-direction: column;
+      &-statement {
+        padding: 3rem 1rem;
+        text-align: center;
+      
+        h2 {
+          font-family: Fraunces-Bold;
+          font-size: 36px;
+   
+        }
+        p {
+          font-family: Barlow;
+          color: $light-gray;
+          line-height: 1.5rem;
+        }
+        h3 {
+          font-family: Fraunces-Bold;
+        }
+      }
+      &-image3,
+      &-image4 {
+        &-statement {
+            width:auto;
+            padding: 0rem 2rem 4rem 2rem;
+        }
+      }
+    }
+    .second{
+        flex-direction: column-reverse;
+    }
+  }
+}

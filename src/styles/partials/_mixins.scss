@@ -1,0 +1,15 @@
+@use './fonts' as *;
+@use './variables' as *;
+
+//media-queries
+@mixin mobile {
+    @media (min-width: $mobile) and (max-width:1083px) {
+      @content;
+    }
+  }
+
+  @mixin desktop {
+    @media (min-width: $desktop) {
+      @content;
+    }
+  }

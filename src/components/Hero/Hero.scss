@@ -1,0 +1,26 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/global.scss" as *;
+.hero{
+    margin-top:5rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:6rem;
+    @include desktop{
+        margin:0;
+        padding:0;
+        gap:3rem;
+    }
+    h1{
+        font-family: Fraunces-Bold;
+        text-transform: uppercase;
+        font-size: 45px;
+        color:white;
+        text-align: center;
+        letter-spacing: .2em;
+     
+
+    }
+}
