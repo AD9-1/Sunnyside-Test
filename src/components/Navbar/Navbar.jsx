@@ -1,34 +1,40 @@
-import React, { useEffect } from "react";
-import logo from "../../assets/logo.svg";
-import iconHamburger from "../../assets/icon-hamburger.svg";
+import React, { useEffect, useState } from "react";
 import "./Navbar.scss";
+import logo from "../../assets/logo.svg";
+import hamburger from "../../assets/icon-hamburger.svg";
+
 const Navbar = () => {
-  const [expandbar, setExpandbar] = React.useState(false);
-  const openMenu = () => {
-    setExpandbar(!expandbar);
-    console.log(expandbar);
+  const [expandBar, setExpandBar] = useState(false);
+
+  const handleClick = () => {
+    setExpandBar(!expandBar);
   };
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 375) {
-        setExpandbar(false);
-      }
-    };
+
+
+  useEffect(() =>{
+    const handleResize=()=>{
+        if(window.innerWidth>375)
+        {
+            setExpandBar(false);
+        }
+    }
     window.addEventListener("resize", handleResize);
-  });
+  },[])
+
+
   return (
     <div className="navbar">
       <div className="navbar-logo">
-        <img src={logo} />
+        <img src={logo} alt="" />
       </div>
       <div className="navbar-open-icon">
-        <img src={iconHamburger} onClick={openMenu} />
+        <img src={hamburger} onClick={handleClick} />
       </div>
-      <ul className={expandbar ? "navbar-list-mobile" : "navbar-list"}>
+      <ul className={expandBar ? "navbar-list-mobile" : "navbar-list"}>
         <li>About</li>
         <li>Services</li>
-        <li>Project</li>
         <li>Contact</li>
+        <li>Projects</li>
       </ul>
     </div>
   );

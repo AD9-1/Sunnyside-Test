@@ -1,11 +1,13 @@
 @use "./styles/partials/mixins" as *;
 
-.background {
-  background-image: url("./assets/mobile/image-header.jpg");
-  background-size: cover;
-  background-position: center center;
-  height: 600px;
-  @include desktop {
-    background-image: url("./assets/desktop/image-header.jpg");
-  }
+.background{
+    background: url("./assets/desktop/image-header.jpg");
+    background-size: cover !important;
+    height:30rem;
+    background-position:center;
+    @include mobile{
+        background: url("./assets/mobile/image-header.jpg");
+        background-position: center center;
+        background-size: cover;
+    }
 }

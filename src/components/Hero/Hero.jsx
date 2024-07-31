@@ -1,12 +1,12 @@
 import React from "react";
-import "./Hero.scss"
-import ArrowDown from "../../assets/icon-arrow-down.svg"
+import arrowdown from "../../assets/icon-arrow-down.svg";
+import "./Hero.scss";
 const Hero = () => {
   return (
     <div className="hero">
       <h1>We Are Creatives</h1>
-      <div className="hero_image">
-        <img src={ArrowDown} alt="" />
+      <div className="hero-image">
+        <img src={arrowdown} alt="" />
       </div>
     </div>
   );
