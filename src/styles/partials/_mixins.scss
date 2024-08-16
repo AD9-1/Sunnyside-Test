@@ -3,7 +3,7 @@
 
 //media-queries
 @mixin mobile {
-    @media (min-width: $mobile) and (max-width:1083px) {
+    @media (min-width: $mobile) and (max-width:800px) {
       @content;
     }
   }

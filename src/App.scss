@@ -1,13 +1,14 @@
-@use "./styles/partials/mixins" as *;
+@use "../src/styles/partials/mixins" as *;
+@use "../src/styles/partials/variables" as *;
 
-.background{
-    background: url("./assets/desktop/image-header.jpg");
-    background-size: cover !important;
-    height:30rem;
-    background-position:center;
-    @include mobile{
-        background: url("./assets/mobile/image-header.jpg");
-        background-position: center center;
-        background-size: cover;
-    }
+.background {
+  background: url("./assets/desktop/image-header.jpg");
+  height: 30rem;
+  background-size: cover;
+
+  @media(max-width:320px) {
+    background: url("./assets/mobile/image-header.jpg");
+    background-size:cover;
+    background-position:center center;
+  }
 }
