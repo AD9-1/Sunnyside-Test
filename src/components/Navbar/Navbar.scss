@@ -1,20 +1,32 @@
 @use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/variables" as *;
-
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/global.scss" as *;
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-left: 2rem;
+  @include mobile {
+    margin: 0;
+    padding: 2rem;
+  }
+  &-openIcon {
+    display: none;
+    @include mobile {
+      display: block;
+    }
+  }
   &-list {
+    @include mobile {
+      display: none;
+    }
     display: flex;
     padding: 0;
-
     justify-content: space-between;
     li {
       margin: 1rem 1rem;
       padding: 1rem;
-      list-style: none;
       font-family: Barlow;
       color: $white;
       &:hover {
@@ -25,6 +37,32 @@
         padding: 1rem;
         font-family: Fraunces-Bold;
       }
+    }
+  }
+  &-mobile-list {
+    width: 80%;
+    background-color: $white;
+    position:absolute;
+    top:10%;
+    left:10%;
+    height:40%;  
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
+    align-items: center;
+    padding:0;
+    font-family: Barlow;
+    li{
+        color:$gray;
+        padding:1rem;
+        &:hover{
+            background-color: $yellow;
+            text-transform: uppercase;
+            border-radius: 1rem;
+            color: $dark-blue;
+            font-family: Fraunces;
+            padding: 1rem 1rem; 
+        }
     }
   }
 }

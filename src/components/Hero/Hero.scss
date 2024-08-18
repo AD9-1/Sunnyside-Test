@@ -1,0 +1,25 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/global.scss" as *;
+@use "../../styles//partials/fonts" as *;
+.hero{
+    width:70%;
+    margin:auto;
+    margin-top:3rem;
+    h1{
+        font-size: 45px;
+        text-align: center;
+        font-family: Fraunces;
+        letter-spacing: .2em;
+        text-transform: uppercase;
+        color:$white;
+        margin-bottom:2rem;
+    }
+   &-image{
+    width:fit-content;
+    margin:auto
+   }
+   @include mobile{
+width:100%;
+   }
+}

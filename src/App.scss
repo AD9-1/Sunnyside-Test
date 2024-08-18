@@ -6,7 +6,7 @@
   height: 30rem;
   background-size: cover;
 
-  @media(max-width:320px) {
+  @include mobile {
     background: url("./assets/mobile/image-header.jpg");
     background-size:cover;
     background-position:center center;
