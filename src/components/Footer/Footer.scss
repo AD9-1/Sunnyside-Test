@@ -1,0 +1,54 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/global.scss" as *;
+
+.footer {
+  background-color: $moderate-cyan;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__heading {
+    color: $primary-cyan;
+    padding-top: 2rem;
+    font-family: "Fraunces-Bold";
+    font-size: 1.5rem;
+  }
+  &__nav {
+    display: flex;
+    padding: 0;
+    flex: 0.8;
+    justify-content: space-between;
+
+    &--list {
+      padding: 2rem;
+      font-family: "Barlow";
+      color: $primary-cyan;
+      transition: 2s;
+
+      &:hover {
+        color: $white;
+        // transition: 2s;
+        font-size: 1.5rem;
+      }
+    }
+  }
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+
+    &--list {
+      padding: 0 2rem 2rem 0;
+      fill: $primary-cyan;
+      transition: 2s;
+
+      &:hover {
+        color: white;
+        // transition: 2s;
+        transform: scale(1.5);
+      }
+    }
+  }
+}

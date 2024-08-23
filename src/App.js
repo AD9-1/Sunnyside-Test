@@ -4,6 +4,7 @@ import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import Feedback from "./components/Feedback/Feedback";
 import Gallery from "./components/Gallery/Gallery";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Banner />
       <Feedback />
       <Gallery />
+      <Footer />
     </>
   );
 }
