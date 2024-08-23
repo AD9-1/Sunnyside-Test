@@ -1,0 +1,88 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/global.scss" as *;
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mobile {
+    margin-bottom: 2rem;
+  }
+
+  &__heading {
+    color: $light-gray;
+    font-family: "Fraunces-Bold";
+    letter-spacing: 0.6rem;
+    padding: 12rem 0 5rem 0;
+
+    @include mobile {
+      padding: 5rem 0 1rem 0;
+      font-size: 0.6rem;
+      letter-spacing: 0.36rem;
+    }
+  }
+  &__cards {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 5rem 1rem 5rem;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 2rem;
+      margin: 0;
+      width: 90%;
+    }
+
+    &--1,
+    &--2,
+    &--3 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 1rem 0 1rem;
+
+      @include mobile {
+        margin-top: 2rem;
+      }
+    }
+    &--text {
+      color: $dark-gray;
+      font-family: "Barlow";
+      margin-top: 2rem;
+      line-height: 2rem;
+      text-align: center;
+      width: 95%;
+
+      @include mobile {
+        font-size: 0.9rem;
+        width: 80%;
+      }
+    }
+    &--image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    &--name {
+      margin-top: 3.5rem;
+      margin-bottom: 0;
+      font-family: "Fraunces-Bold";
+      color: $saturated-blue;
+
+      @include mobile {
+        margin-top: 1rem;
+      }
+    }
+    &--designation {
+      color: $light-gray;
+      font-size: 0.8rem;
+      margin-top: 0.2rem;
+      font-family: "Barlow";
+    }
+  }
+}
